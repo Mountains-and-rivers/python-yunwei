@@ -30,7 +30,6 @@ import binascii
 class Cipher_AES:
     cipher = getattr(Crypto.Cipher, "AES")
     #BLOCK_SIZE = 16
-    cipher = getattr(Crypto.Cipher, "AES")
     pad = {"default": lambda x, y: x + (y - len(x) % y) * " ".encode("utf-8"),
         "PKCS5Padding": lambda x, y: x + (y - len(x) % y) * chr(y - len(x) % y).encode("utf-8")}
     unpad = {"default": lambda x: x.rstrip(),
@@ -63,6 +62,7 @@ class Cipher_AES:
         encode_func = Cipher_AES.encode.get(self.__code_method)
         if encode_func:
             cipher_text = encode_func(cipher_text)
+
         return cipher_text.decode("utf-8").rstrip()
  
     def decrypt(self, cipher_text):

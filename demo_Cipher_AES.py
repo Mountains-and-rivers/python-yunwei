@@ -1,7 +1,7 @@
 
 from Cipher_oAES import Cipher_AES
  
-key = "q435234523452345"
+key = "abcdefgh12345678abcdefgh12345678"
 iv = key[::-1]
 text = "changeme_123"
 cipher_method = "MODE_EBC"
