@@ -38,3 +38,8 @@ from ssh import sshExec
 
 if __name__ == '__main__':
     sftp_down_file("/root/test.txt", "D:/text.txt")
+
+
+
+penssl pkcs8 -topk8 -inform PEM -in private.pem -outform pem -nocrypt -out private_pkcs8.pem
+openssl pkcs8 -in private_pkcs8.pem -nocrypt -out private_plcs1.pem
