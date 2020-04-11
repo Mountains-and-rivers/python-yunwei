@@ -47,10 +47,8 @@ class Cipher_AES:
         self.__pad_method = pad_method          # 填充方式，解决 Java 问题选用"PKCS5Padding"
         self.__code_method = code_method        # 编码方式，目前只有"base64"、"hex"两种
         if self.__cipher_method == "MODE_CBC":
-            print("ljghkljlhjklhjklhjklhkj")
             self.__cipher = Cipher_AES.cipher.new(self.__key.encode("utf-8"), Cipher_AES.cipher.MODE_CBC, self.__iv.encode("utf-8"))
         else:
-            print("jkdsajdkljakljfdhaklsdhfklasghdfkgaksdf")
             self.__cipher = Cipher_AES.cipher.new(self.__key.encode("utf-8"), Cipher_AES.cipher.MODE_ECB)
  
     def __getitem__(self, item):
