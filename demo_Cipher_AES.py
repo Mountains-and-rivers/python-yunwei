@@ -1,9 +1,9 @@
 
 from Cipher_oAES import Cipher_AES
  
-key = "abcdefgh12345678abcdefgh12345678"
+key = "abcdefgh123456783lkiklo5o5julhyl"
 iv = key[::-1]
-text = "changeme_123"
+text = "Changeme_123"
 cipher_method = "MODE_EBC"
 pad_method = "PKCS5Padding"
 code_method = "hex"
