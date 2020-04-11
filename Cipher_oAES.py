@@ -13,6 +13,9 @@ import Crypto.Random
 import base64
 import binascii
 
+
+# python3 安装 Crypto 是 pip3 install pycryptodome
+
 #----------------default-----------------
 # pad = {"default": lambda x, y: x + (y - len(x) % y) * " ".encode("utf-8"),
 #         "PKCS5Padding": lambda x, y: x + (y - len(x) % y) * chr(y - len(x) % y).encode("utf-8")}
@@ -31,7 +34,7 @@ class Cipher_AES:
     pad = {"default": lambda x, y: x + (y - len(x) % y) * " ".encode("utf-8"),
         "PKCS5Padding": lambda x, y: x + (y - len(x) % y) * chr(y - len(x) % y).encode("utf-8")}
     unpad = {"default": lambda x: x.rstrip(),
-        "PKCS5Padding": lambda x: x[:-ord(x[-1])]}
+        "PKCS5Padding": lambda s: s[:-ord(s[len(s) - 1:])]}
     encode = {"base64": base64.encodebytes,
                 "hex": binascii.b2a_hex}
     decode = {"base64": base64.decodebytes,
