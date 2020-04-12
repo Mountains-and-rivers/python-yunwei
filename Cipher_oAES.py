@@ -12,7 +12,7 @@ import Crypto.Cipher.AES
 import Crypto.Random
 import base64
 import binascii
-
+from Crypto.Protocol.KDF import PBKDF2
 
 # python3 安装 Crypto 是 pip3 install pycryptodome
 
@@ -86,3 +86,10 @@ class Cipher_AES:
     def pad_or_unpad(self, type_, contents):
         lambda_func = self[type_: self.__pad_method]
         return lambda_func(contents, len(self.__key)) if type_=="pad" else lambda_func(contents)
+
+    def get_private_key(self,password):
+        salt = b"this is a salt"
+        kdf = PBKDF2(password, salt, 64, 1000)
+        key = kdf[:32]
+        return key
+ 
