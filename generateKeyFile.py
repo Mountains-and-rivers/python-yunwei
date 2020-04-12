@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# Author: wxnacy(wxnacy@gmail.com)
+# Author: wangguilin
 # Description:
-
 
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-

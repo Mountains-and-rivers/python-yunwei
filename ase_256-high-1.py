@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# Author: wxnacy(wxnacy@gmail.com)
+# Author: wangguilin
 # Description:
+#用户提供用于加密数据的密码（密码）。在将其用作加密密钥之前，会将该密码短语转换为哈希值
 
 
 # AES 256 encryption/decryption using pycryptodome library

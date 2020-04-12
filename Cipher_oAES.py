@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# Author: wxnacy(wxnacy@gmail.com)
+# Author: wangguilin
 # Description:
-
-'''
-Created on 2018年7月7日
-@author: ray
-'''
- 
 import Crypto.Cipher.AES
 import Crypto.Random
 import base64

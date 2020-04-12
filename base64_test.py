@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# Author: wxnacy(wxnacy@gmail.com)
+# Author: wangguilin
 # Description:
-
 import base64
 import random
 #flag="flag{**some seclet**}"
