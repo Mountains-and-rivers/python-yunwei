@@ -3,13 +3,6 @@
 # Author: wangguilin
 # Description:
 
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-# Author: wxnacy(wxnacy@gmail.com)
-# Description:
-
-
-
 import rsa
 import base64
 from urllib import request
