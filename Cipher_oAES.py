@@ -36,7 +36,7 @@ class Cipher_AES:
     def __init__(self, key=None, iv=None, cipher_method=None, pad_method="default", code_method=None):
         self.__key = key if key else "abcdefgh12345678"     # 密钥（长度必须为16、24、32）
         self.__iv = iv if iv else Crypto.Random.new().read(Cipher_AES.cipher.block_size)    # 向量（长度与密钥一致，ECB模式不需要）
-        self.__cipher_method = cipher_method.upper() if cipher_method and isinstance(cipher_method, str) else "MODE_ECB"   # 加密方式，["MODE_ECB"|"MODE_CBC"|"MODE_CFB"||"MODE_GCM"]等
+        self.__cipher_method = cipher_method.upper() if cipher_method and isinstance(cipher_method, str) else "MODE_ECB"   # 加密方式，["MODE_ECB"|"MODE_CBC"|"MODE_CFB"|"MODE_GCM"]等
         self.__pad_method = pad_method          # 填充方式，解决 Java 问题选用"PKCS5Padding"
         self.__code_method = code_method        # 编码方式，目前只有"base64"、"hex"两种
         if self.__cipher_method == "MODE_CBC":
